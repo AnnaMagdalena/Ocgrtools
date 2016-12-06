@@ -13,5 +13,7 @@ RoxygenNote: 5.0.1
 Imports: dplyr,
     ggplot2
 Suggests: knitr,
-    rmarkdown
+    rmarkdown,
+    ggplot2,
+    dyplr
 VignetteBuilder: knitr
