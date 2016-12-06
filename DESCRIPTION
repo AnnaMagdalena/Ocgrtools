@@ -2,8 +2,11 @@ Package: Ocgrtools
 Title: Tools for visualizing oceanographic data
 Version: 0.0.0.9000
 Authors@R: person("Anna", "Posacka", email = "ania.posacka@gmail.com", role = c("aut", "cre"))
-Description: Creates ocean property depth profiles and contains a dataset from an expedition in the North Pacific
-Depends: R (>= 3.3.1)
+Description: Creates ocean property depth profiles and contains a dataset from
+    an expedition in the North Pacific
+Depends:
+    R (>= 3.3.1)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 5.0.1
