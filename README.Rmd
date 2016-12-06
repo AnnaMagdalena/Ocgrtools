@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ####The problem####
 One of the most important visualizations of oceanographic data is the use of **depth profiles**. Depth profiles are plotted with depth along the vertical axis (y-axis) where seasurface represents 0m and is plotted at the top axis and deepest waters (eg. 2000m) are plotted at the bottom of y-axis. The range on the horizontal axis (x-axis) represents the range in the ocean property being plotted. Using any plot functions, be it R base or ggplot renders a graph where depths representing 0m occur at the bottom of the y-axis and the deepest depths occur at the top of the y-axis, which is counterinuitive to visualization of properties with depth. As such each time these ocean properties are plotted the "plotter" is required to reverse the y-axis. The pplot (property plot) function in this packages allows to create such plots more readily
 ***
+
 ####Installation###
 
 ```{r}
@@ -23,19 +24,6 @@ One of the most important visualizations of oceanographic data is the use of **d
 
 ####Demo###
 
-Get this:
-```{r}
-library(Ocgrtools)
-pplot(CuLineP2011,"dCu_kg","depth")
-```
-
-Versus this:
-
-```{r}
-library(ggplot2)
-ggplot(CuLineP2011,aes(x=dCu_kg,y=depth))+geom_point(aes(colour=stn),size=3)
-```
-
 Use the included data to learn about chemistry of the North Pacific Ocean. Read some more about this dataset in the [vignette](https://github.com/AnnaMagdalena/Ocgrtools/blob/master/vignettes/Ocgrtools.Rmd)
 
 ```{r}
@@ -43,3 +31,20 @@ library(Ocgrtools)
 dat <- CuLineP201127
 head(dat)
 ```
+
+Get this:
+```{r}
+#library(Ocgrtools)
+library(ggplot2)
+#dat <- CuLineP201127
+pplot(dat,"dCu_kg","depth")
+```
+
+Versus this:
+
+```{r}
+#library(ggplot2)
+ggplot(dat,aes(x=dCu_kg,y=depth))+geom_point(aes(colour=stn),size=3)
+```
+
+
