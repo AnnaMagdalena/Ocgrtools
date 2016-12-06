@@ -17,7 +17,10 @@ pplot(df, property, depth)
 plot
 }
 \description{
-plot ocean property with depth
+Create depth profiles of ocean properties.Depth profiles are plotted with depth along
+the vertical axis (y-axis) where seasurface represents 0m and is plotted at the top
+axis and deepest waters (eg. 2000m) are plotted at the bottom of y-axis. The range on
+the horizontal axis (x-axis) represents the range in the ocean property being plotted.
 }
 \examples{
 #' pplot(data,"temp","depth")
