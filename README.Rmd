@@ -33,17 +33,14 @@ head(dat)
 ```
 
 Get this:
-```{r}
-#library(Ocgrtools)
+```{r message=FALSE, warning=FALSE}
 library(ggplot2)
-#dat <- CuLineP201127
 pplot(dat,"dCu_kg","depth")
 ```
 
 Versus this:
 
 ```{r}
-#library(ggplot2)
 ggplot(dat,aes(x=dCu_kg,y=depth))+geom_point(aes(colour=stn),size=3)
 ```
 

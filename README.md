@@ -19,7 +19,7 @@ One of the most important visualizations of oceanographic data is the use of **d
 
     ## Using GitHub PAT from envvar GITHUB_PAT
 
-    ## Skipping install of 'Ocgrtools' from a github remote, the SHA1 (afc57513) has not changed since last install.
+    ## Skipping install of 'Ocgrtools' from a github remote, the SHA1 (6f782a04) has not changed since last install.
     ##   Use `force = TRUE` to force installation
 
 #### Demo
@@ -50,14 +50,7 @@ head(dat)
 Get this:
 
 ``` r
-#library(Ocgrtools)
 library(ggplot2)
-```
-
-    ## Warning: package 'ggplot2' was built under R version 3.3.2
-
-``` r
-#dat <- CuLineP201127
 pplot(dat,"dCu_kg","depth")
 ```
 
@@ -66,7 +59,6 @@ pplot(dat,"dCu_kg","depth")
 Versus this:
 
 ``` r
-#library(ggplot2)
 ggplot(dat,aes(x=dCu_kg,y=depth))+geom_point(aes(colour=stn),size=3)
 ```
 
