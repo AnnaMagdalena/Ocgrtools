@@ -1,0 +1,58 @@
+---
+title: "Ocgrtools : tools for oceanographic data visualization"
+author: "Anna Posacka"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+One of the most important visualizations of oceanographic data is the use of **depth profiles**. Depth profiles are plotted with depth along the vertical axis (y-axis) where seasurface represents 0m and is plotted at the top axis and deepest waters (eg. 2000m) are plotted at the bottom of y-axis. The range on the horizontal axis (x-axis) represents the range in the ocean property being plotted. Using any plot functions, be it R base or ggplot renders a graph where depths representing 0m occur at the bottom of the y-axis and the deepest depths occur at the top of the y-axis, which is counterinuitive to visualization of properties with depth. As such each time these ocean properties are plotted the "plotter" is required to reverse the y-axis. The pplot (property plot) function in this packages allows to create such plots more readily and also contains some custom plot esthetics. It is completely based on the ggplot package.
+This package contains also contains a companion data product: CuLineP201127 that is a compilation
+of various oceanograpic measurements obtained during Line P cruise in the subarctic NE Pacific. 
+
+## The dataset
+
+Inspect the variables
+
+```{r}
+library(Ocgrtools)
+dat <- CuLineP201127
+head(dat)
+
+```
+Test data visualization
+
+```{r}
+library(ggplot2)
+ggplot(dat,aes(x=phosph,y=dCu_kg))+geom_point(aes(colour=stn),size=3)
+
+```
+
+## Use of the property plot function :pplot
+
+This is what the propert versus depth data looks like without any re-organization.Visually,this plot gives an impression that a property values at the bottom of y-axis are what you would expect them to be in deepest waters - where these values are actually plotted at the top-right of the graph
+
+```{r}
+library(ggplot2)
+ggplot(dat,aes(x=dCu_kg,y=depth))+geom_point(aes(colour=stn),size=3)
+
+```
+
+This is the "fixed" depth profile with the pplot. Note that variables (in columns) are imported in the function as strings, hence " " need to be used for the variables to plot
+
+```{r}
+library(Ocgrtools)
+pplot(dat,"dCu_kg","depth")
+
+```
+
+And, one more example using salinity as a variable
+
+```{r}
+library(Ocgrtools)
+pplot(dat,"sal","depth")
+
+```
