@@ -1,3 +1,17 @@
+#' pplot
+#'
+#' plot ocean property with depth
+#'
+#' @param df dataframe
+#' @param property numeric vector
+#' @param depth numeric vector
+#'
+#' @return plot
+#' @export
+#'
+#' @examples
+#'#' pplot(data,"temp","depth")
+
 pplot <- function(df,property,depth) {
 	ggplot2 :: ggplot(data=df,mapping =aes_string(x=property,y=depth), group=stn) +
 		geom_path(aes(colour=stn),size=0.2)+
