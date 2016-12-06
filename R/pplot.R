@@ -16,7 +16,7 @@
 #'#' pplot(data,"temp","depth")
 
 pplot <- function(df,property,depth) {
-	ggplot2 :: ggplot(data=df,mapping =aes_string(x=property,y=depth), group=stn) +
+	  ggplot2 :: ggplot(data=df,mapping =aes_string(x=property,y=depth), group=stn) +
 		geom_path(aes(colour=stn),size=0.2)+
 		geom_point(aes(colour=stn),size=3)+
 		scale_y_reverse(breaks = seq(0,5000,500))+

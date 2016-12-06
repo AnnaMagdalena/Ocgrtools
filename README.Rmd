@@ -25,18 +25,15 @@ One of the most important visualizations of oceanographic data is the use of **d
 
 Get this:
 ```{r}
-library(ggplot2)
-ggplot(dat,aes(x=dCu_kg,y=depth))+geom_point(aes(colour=stn),size=3)
-
 library(Ocgrtools)
-pplot(dat,"dCu_kg","depth")
+pplot(CuLineP2011,"dCu_kg","depth")
 ```
 
 Versus this:
 
 ```{r}
 library(ggplot2)
-ggplot(dat,aes(x=dCu_kg,y=depth))+geom_point(aes(colour=stn),size=3)
+ggplot(CuLineP2011,aes(x=dCu_kg,y=depth))+geom_point(aes(colour=stn),size=3)
 ```
 
 Use the included data to learn about chemistry of the North Pacific Ocean. Read some more about this dataset in the [vignette](https://github.com/AnnaMagdalena/Ocgrtools/blob/master/vignettes/Ocgrtools.Rmd)
