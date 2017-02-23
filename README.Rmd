@@ -8,6 +8,7 @@ output: github_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+_package developed as a part of STATS545 coursework_
 
 **Ocgrtools** lets you to create speady plots of ocean property depth profiles and contains a dataset to go with it. This dataset is part of the study that was focused on investigating the **biogeochemical cycling of copper in the subarctic NE Pacific**, more information on the data and the study can be found [in this public repo](https://github.com/AnnaMagdalena/DCu_LineP-Subarctic-Pacific).
 
