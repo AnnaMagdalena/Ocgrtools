@@ -2,8 +2,9 @@ Ocgrtools
 ================
 Anna Posacka
 December 6, 2016
+_package developed as part of the coursework for STAT545 at UBC_
 
-**Ocgrtools** lets you to create speady plots of ocean property depth profiles and contains a dataset to go with it. This dataset is part of the study that was focused on investigating the **biogeochemical cycling of copper in the subarctic NE Pacific**, more information on the data and the study can be found [in this public repo](https://github.com/AnnaMagdalena/DCu_LineP-Subarctic-Pacific).
+**Ocgrtools** lets you to create speady plots of ocean property depth profiles and contains a dataset to go with it. 
 
 ------------------------------------------------------------------------
 
